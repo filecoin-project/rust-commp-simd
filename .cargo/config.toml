@@ -1,0 +1,6 @@
+[target.wasm32-wasip1]
+runner = ["wasmtime", "-W", "max-memory-size=4294967296", "--dir=.", "--env", "MAX_TEST_SIZE"]
+rustflags = ["-C", "target-feature=+simd128"]
+
+[build]
+rustflags = ["-C", "target-cpu=native"]
